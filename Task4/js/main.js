@@ -4,11 +4,24 @@
 
 function getAttributes(submitEvent) {
     submitEvent.preventDefault();
-    const w3r = document.getElementById('w3r').attributes;
-    console.log(w3r);
-    for (let value of w3r) {
-        if (value !== 'id="w3r"') { // does not work yet
-            console.log(value);
+    const attributesOfA = document.getElementById('w3r').attributes;
+
+    for (let attribute of attributesOfA) {
+        if (attribute.value !== 'w3r') {
+            console.log(attribute.value);
         }
     }
 }
+
+// This works as well
+
+// function getAttributes(submitEvent) {
+//     submitEvent.preventDefault();
+//     const attributesOfA = document.getElementById('w3r').attributes;
+
+//     console.log(attributesOfA.href.value);
+//     console.log(attributesOfA.hreflang.value);
+//     console.log(attributesOfA.rel.value);
+//     console.log(attributesOfA.target.value);
+//     console.log(attributesOfA.type.value);
+// }
