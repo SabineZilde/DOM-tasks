@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        td,
+        th,
+        table {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 35%;
+        }
+
+        th,
+        td {
+            height: 25px;
+        }
+    </style>
     <title>Document</title>
 </head>
+
 <body>
-    <script src="js/main.js"></script>
+    <h3>Table section</h4>
+        <table id="table">
+            <tr>
+                <th></td>
+                <th>Column 1</td>
+                <th>Column 2</td>
+            </tr>
+            <tr>
+                <th>Row 1</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Row 2</th>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h3>Input section</h4>
+            <form onsubmit="submitForm(event)">
+                <div>
+                    <label for="input">Input your cell content:</label>
+                    <input type="text" id="input">
+                </div>
+                <div>
+                    <label for="selectRow">Pick your row number:</label>
+                    <select id="selectRow">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="selectCol">Pick your column number:</label>
+                    <select id="selectCol">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+                <div>
+                    <Button>Add your input</Button>
+                </div>
+            </form>
+            <script src="js/main.js"></script>
 </body>
+
 </html>
